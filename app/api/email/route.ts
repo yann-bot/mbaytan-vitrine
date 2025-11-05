@@ -1,6 +1,4 @@
 import { Resend } from 'resend';
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
 
@@ -18,6 +16,7 @@ export async function POST(req: Request): Promise<Response> {
       return new Response(JSON.stringify({ success: false, error: 'Missing required fields' }), { status: 400, headers });
     }
 
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const result = await resend.emails.send({
       from: 'MBAYTAN Beauty <onboarding@resend.dev>',
       to: 'yannouafete@gmail.com',
