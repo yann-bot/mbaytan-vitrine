@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Send } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa6';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { z } from 'zod';
@@ -111,6 +112,15 @@ export function Contact() {
                 </p>
               </div>
             </div>
+            
+            <div className="flex items-start space-x-4">
+              <FaWhatsapp className="text-[#b77d43] mt-1 flex-shrink-0" size={24} />
+              <div>
+                <p className="text-[#533F2F]">
+                  WhatsApp: +236 XX XX XX XX
+                </p>
+              </div>
+            </div>
 
             <div className="flex items-start space-x-4">
               <Mail className="text-[#b77d43] mt-1 flex-shrink-0" size={24} />
@@ -122,7 +132,7 @@ export function Contact() {
             </div>
 
             <div className="pt-6">
-              <h4 className="text-[#533F2F] mb-3">Business Hours</h4>
+              <h4 className="text-[#533F2F] mb-3">Horaires d'ouverture</h4>
               <p className="text-[#533F2F]">
                 Lundi - Samedi: 9:00 - 19:00 
               </p>
